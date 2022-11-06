@@ -1,6 +1,19 @@
-import logo from './logo.svg';
 import { createTheme, ThemeProvider} from "@mui/material";
+import AbilityButton from "./components/AbilityButton";
+import SimpleDialogDemo from "./components/DialogTest";
 import './App.css';
+import AbilityDialog from "./components/AbilityDialog";
+import ResponsiveAppBar from "./components/AppBar";
+import GameGrid from "./components/Grid";
+import SetupDialog from "./components/SetupDialog";
+import SetupButton from "./components/SetupButton";
+import React from "react";
+import CleanRoomButton from "./components/CleanRoomButton";
+import ResetButton from "./components/ResetButton";
+import StartButton from "./components/StartButton";
+import NightInfoButton from "./components/NightInfoButton";
+import SitButton from "./components/SitButton";
+import RoleCheckButton from "./components/RoleCheckButton";
 
 const theme = createTheme({
   palette:{
@@ -28,10 +41,50 @@ const theme = createTheme({
 });
 
 function App() {
+  const [nbrPlayers, setNbrPlayers] = React.useState(9);
+  const [stage, setStage] = React.useState("no");
+
   return(
       <div className="App">
         <ThemeProvider theme={theme}>
 
+          <ResponsiveAppBar/>
+          <br/>
+
+          <SetupButton setNbrPlayers={setNbrPlayers}/>
+          <br/>
+
+          <ResetButton/>
+          <br/>
+
+          <CleanRoomButton/>
+          <br/>
+
+          <br/>
+          <br/>
+
+          <StartButton/>
+          <br/>
+
+          <NightInfoButton/>
+          <br/>
+
+          <br/>
+          <br/>
+          <br/>
+
+          <SitButton nbrPlayers={nbrPlayers} />
+          <br/>
+
+          <RoleCheckButton/>
+          <br/>
+
+          <AbilityButton/>
+          <br/>
+
+          {/*<SetupDialog/>*/}
+          {/*<GameGrid></GameGrid>*/}
+          {/*<SimpleDialogDemo/>*/}
         </ThemeProvider>
       </div>
   )
