@@ -1,5 +1,5 @@
 import React from 'react'
-import {Button, styled, Dialog} from "@mui/material";
+import {Button, styled} from "@mui/material";
 
 import SetupDialog from "./SetupDialog";
 import MessageDialog from "./MessageDialog";
