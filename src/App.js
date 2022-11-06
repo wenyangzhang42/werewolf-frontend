@@ -1,11 +1,7 @@
 import { createTheme, ThemeProvider} from "@mui/material";
 import AbilityButton from "./components/AbilityButton";
-import SimpleDialogDemo from "./components/DialogTest";
 import './App.css';
-import AbilityDialog from "./components/AbilityDialog";
 import ResponsiveAppBar from "./components/AppBar";
-import GameGrid from "./components/Grid";
-import SetupDialog from "./components/SetupDialog";
 import SetupButton from "./components/SetupButton";
 import React from "react";
 import CleanRoomButton from "./components/CleanRoomButton";

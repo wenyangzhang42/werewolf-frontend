@@ -33,10 +33,10 @@ export default function SetupDialog(props) {
     const handleSubmit = () => {
         let roles = gods+","+specials
         for(let i=0; i<nbrVillagers; i++){
-            roles += ","+"villager";
+            roles += ",villager";
         }
         for(let i=0; i<nbrWerewolves; i++){
-            roles += ","+"werewolf";
+            roles += ",werewolf";
         }
         props.onSubmit(roles);
     }

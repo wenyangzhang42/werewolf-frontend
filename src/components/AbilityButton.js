@@ -1,5 +1,5 @@
 import React from 'react'
-import {Button, styled, Dialog} from "@mui/material";
+import {Button, styled} from "@mui/material";
 
 import AbilityDialog from "./AbilityDialog";
 import MessageDialog from "./MessageDialog";
@@ -89,10 +89,6 @@ function AbilityButton(){
             setMsg(err.message);
             setOpenMsg(true)
         }
-    }
-
-    const temp = () => {
-        setOpen(true)
     }
 
     return (
