@@ -28,7 +28,7 @@ function CleanRoomButton(){
 
     const handleClick = async () => {
         try {
-            let response = await fetch(`http://localhost:8000/reset`, {
+            let response = await fetch(`http://44.203.137.157/reset`, {
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json",
