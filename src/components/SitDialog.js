@@ -11,6 +11,7 @@ import Button from "@mui/material/Button";
 
 function AbilityDialog(props){
     const [seat, setSeat] = React.useState('0');
+    const [name, setName] = React.useState('please enter a name');
 
     let numbers = [];
     for(let i=1; i<props.nbrPlayers+1; i++){
@@ -18,11 +19,15 @@ function AbilityDialog(props){
     }
 
     const handleSubmit = () => {
-        props.onSubmit(seat)
+        props.onSubmit(seat, name)
     }
 
     const handleSetSeat = (event) => {
         setSeat(event.target.value)
+    }
+
+    const handleSetName = (event) => {
+        setName(event.target.value)
     }
 
     return(
@@ -43,7 +48,7 @@ function AbilityDialog(props){
                 >
                     <TextField
                         required={true}
-                        id="outlined-select-currency"
+                        id="outlined-select-seat"
                         select
                         label="Select"
                         value={seat}
@@ -56,6 +61,15 @@ function AbilityDialog(props){
                             </MenuItem>
                         )))}
                     </TextField>
+                    <TextField
+                        required={true}
+                        id="outlined-select name"
+                        label="Nickname"
+                        variant="standard"
+                        placeholder={name}
+                        value={name}
+                        onChange={handleSetName}
+                    />
                 </Box>
             </DialogContent>
             <DialogActions>

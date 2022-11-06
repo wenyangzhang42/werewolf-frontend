@@ -23,7 +23,7 @@ const StyledButton = styled(Button)({
     textTransform: 'capitalize',
 });
 
-function AbilityButton(){
+function AbilityButton(props){
     const [msg, setMsg] = React.useState("");
     const [role, setRole] = React.useState('unset');
     const [seat, setSeat] = React.useState('unset');
@@ -39,7 +39,7 @@ function AbilityButton(){
 
     const preAbilityCheck = async () => {
         try {
-            let response = await fetch(`http://44.203.137.157/pre_ability`, {
+            let response = await fetch(`http://44.203.137.157/pre_ability/${props.name}`, {
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json",

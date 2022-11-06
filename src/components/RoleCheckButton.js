@@ -22,13 +22,13 @@ const StyledButton = styled(Button)({
     textTransform: 'capitalize',
 });
 
-function RoleCheckButton(){
+function RoleCheckButton(props){
     const [msg, setMsg] = React.useState("");
     const [openMsg, setOpenMsg] = React.useState(false);
 
     const handleClick = async () => {
         try {
-            let response = await fetch(`http://44.203.137.157/role`, {
+            let response = await fetch(`http://44.203.137.157/role/${props.name}`, {
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json",
@@ -39,7 +39,7 @@ function RoleCheckButton(){
             if(res.status_code != 200){
                 setMsg(res.error)
             }else {
-                setMsg(res.result.message)
+                setMsg(res.result.message + props.name)
             }
         } catch (err) {
             setMsg(err.message);

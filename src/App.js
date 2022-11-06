@@ -39,6 +39,7 @@ const theme = createTheme({
 function App() {
   const [nbrPlayers, setNbrPlayers] = React.useState(9);
   const [stage, setStage] = React.useState("no");
+  const [name, setName] = React.useState('please enter a name');
 
   return(
       <div className="App">
@@ -69,13 +70,13 @@ function App() {
           <br/>
           <br/>
 
-          <SitButton nbrPlayers={nbrPlayers} />
+          <SitButton nbrPlayers={nbrPlayers} nameSetter={setName}/>
           <br/>
 
-          <RoleCheckButton/>
+          <RoleCheckButton name={name}/>
           <br/>
 
-          <AbilityButton/>
+          <AbilityButton name={name}/>
           <br/>
 
           {/*<SetupDialog/>*/}

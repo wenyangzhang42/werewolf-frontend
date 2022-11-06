@@ -28,10 +28,10 @@ function SitButton(props){
     const [open, setOpen] = React.useState(false);
     const [openMsg, setOpenMsg] = React.useState(false);
 
-    const handleSubmit = async (seat) => {
+    const handleSubmit = async (seat, name) => {
         setOpen(false)
         try {
-            let response = await fetch(`http://44.203.137.157/sit/${seat}`, {
+            let response = await fetch(`http://44.203.137.157/sit/${seat}/${name}`, {
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json",
@@ -43,6 +43,7 @@ function SitButton(props){
                 setMsg(res.error)
             }else {
                 setMsg(res.result.message)
+                props.nameSetter(name)
             }
         } catch (err) {
             setMsg(err.message);
