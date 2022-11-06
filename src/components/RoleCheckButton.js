@@ -39,7 +39,7 @@ function RoleCheckButton(props){
             if(res.status_code != 200){
                 setMsg(res.error)
             }else {
-                setMsg(res.result.message + props.name)
+                setMsg(res.result.message)
             }
         } catch (err) {
             setMsg(err.message);

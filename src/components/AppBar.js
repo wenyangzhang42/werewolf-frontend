@@ -13,8 +13,10 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 
+import wwIcon from '../resources/wwIcon.webp'
+
 const pages = ['富强', '民主', '文明', '和谐'];
-const settings = ['- 不会有人觉得这里可以登录吧', '- 我猜你点了左边的社会主义核心价值观 :)', '- 笑死我根本不会写前端', '- 口，都可以口'];
+const settings = ['- 不会有人觉得这里可以登录吧', '- 我猜你点了左边的社会主义核心价值观 :)', '- 笑死我根本不会写前端', '- 摆，都可以摆'];
 
 function ResponsiveAppBar() {
     const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -67,7 +69,9 @@ function ResponsiveAppBar() {
                             onClick={handleOpenNavMenu}
                             color="inherit"
                         >
-                            <MenuIcon />
+                            {/*<MenuIcon />*/}
+                            <img src={wwIcon}/>
+                            {/*<img src={wwIcon} className={classes.logoMobile}/>*/}
                         </IconButton>
                         <Menu
                             id="menu-appbar"
