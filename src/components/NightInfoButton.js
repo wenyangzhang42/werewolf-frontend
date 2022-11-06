@@ -29,7 +29,7 @@ function NightInfoButton(){
 
     const handleClick = async () => {
         try {
-            let response = await fetch(`http://44.203.137.157/night_info`, {
+            let response = await fetch(`http://44.203.137.157/room1/night_info`, {
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json",

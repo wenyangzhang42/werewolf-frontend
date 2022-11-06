@@ -40,7 +40,7 @@ function SetupButton(props){
     const handleSubmit = async (value) => {
         setOpen(false);
         try {
-            let response = await fetch(`http://44.203.137.157/setup?roles=${value}`, {
+            let response = await fetch(`http://44.203.137.157/room1/setup?roles=${value}`, {
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json",

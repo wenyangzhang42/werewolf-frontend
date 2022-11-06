@@ -28,7 +28,7 @@ function RoleCheckButton(props){
 
     const handleClick = async () => {
         try {
-            let response = await fetch(`http://44.203.137.157/role/${props.name}`, {
+            let response = await fetch(`http://44.203.137.157/room1/role/${props.name}`, {
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json",

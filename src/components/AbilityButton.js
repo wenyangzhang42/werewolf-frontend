@@ -39,7 +39,7 @@ function AbilityButton(props){
 
     const preAbilityCheck = async () => {
         try {
-            let response = await fetch(`http://44.203.137.157/pre_ability/${props.name}`, {
+            let response = await fetch(`http://44.203.137.157/room1/pre_ability/${props.name}`, {
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json",
@@ -68,7 +68,7 @@ function AbilityButton(props){
     const handleSubmit = async (targets) => {
         setOpen(false)
         try {
-            let response = await fetch(`http://44.203.137.157/ability/${role}/${seat}?targets=${targets}`, {
+            let response = await fetch(`http://44.203.137.157/room1/ability/${role}/${seat}?targets=${targets}`, {
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json",

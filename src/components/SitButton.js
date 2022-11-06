@@ -31,7 +31,7 @@ function SitButton(props){
     const handleSubmit = async (seat, name) => {
         setOpen(false)
         try {
-            let response = await fetch(`http://44.203.137.157/sit/${seat}/${name}`, {
+            let response = await fetch(`http://44.203.137.157/room1/sit/${seat}/${name}`, {
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json",

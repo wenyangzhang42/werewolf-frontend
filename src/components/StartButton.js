@@ -28,7 +28,7 @@ function StartButton(){
 
     const handleClick = async () => {
         try {
-            let response = await fetch(`http://44.203.137.157/start`, {
+            let response = await fetch(`http://44.203.137.157/room1/start`, {
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json",

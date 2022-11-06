@@ -28,7 +28,7 @@ function ResetButton(){
 
     const handleClick = async () => {
         try {
-            let response = await fetch(`http://44.203.137.157/restart`, {
+            let response = await fetch(`http://44.203.137.157/room1/restart`, {
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json",
